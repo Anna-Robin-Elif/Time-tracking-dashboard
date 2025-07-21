@@ -1,0 +1,374 @@
+//Fonts
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/rubik300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/rubik400.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/rubik500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+//Colors
+//### Primary
+
+$Purple600: hsl(246, 80%, 60%);
+$Orange300: hsl(15, 100%, 70%);
+$Blue300: hsl(195, 74%, 62%);
+$Pink400: hsl(348, 100%, 68%);
+$Green400: hsl(145, 58%, 55%);
+$Purple700: hsl(264, 64%, 52%);
+$Yellow300: hsl(43, 84%, 65%);
+
+//### Neutral
+
+$Navy950: hsl(226, 43%, 10%);
+$Navy900: hsl(235, 46%, 20%);
+$Navy500: hsl(236, 42%, 35%);
+$Purple500: hsl(235, 45%, 61%);
+$Navy200: hsl(236, 100%, 87%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+    background-color: $Navy950;
+    z-index: 0;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.container{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem;
+
+    &__p{
+        color: $Navy200;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    &__span{
+        font-size: 2rem; 
+        font-weight: 400;
+    }
+    
+    &__h1{
+        color: white;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    
+    &__h2{
+        color: white;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    &__dots{
+        color: $Navy200;
+        margin-top: -2rem;
+        font-size: 1.8rem;
+    }
+
+    &__order{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__intro{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        z-index: 1;
+
+        &--img{
+            width: 30%;
+            min-width: 4rem; 
+            max-width: 6rem; 
+            height:auto; 
+            margin: 0.5rem; 
+            border: 0.2rem solid white; 
+            border-radius: 20rem;
+        }
+    }
+    &__background{
+        position: relative;
+        width: 80%;
+        height: 5rem;
+        display: flex;
+        padding: 1rem 2rem 01rem 2rem ;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: $Navy900;
+        color: aliceblue;
+        border-radius: 1rem;
+        margin-top: -4rem;
+        z-index: 0; 
+        
+        &--navy{
+            background-color: $Navy900;
+            padding: 2rem 2rem 2rem 2rem;
+        }
+        &--navydark{
+            background-color: $Navy950;
+        }
+
+    //Für media query Desktop Size
+    /*   &:hover {
+        background-color: $Navy500;
+    }*/
+
+    }
+    
+    
+    &__icon{
+        width: 80%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem 1rem 2rem ;
+        align-items: flex-end;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: -4.4rem;
+
+        
+        & img{
+            margin-top: -1.2rem;
+            margin-right: -1rem;
+            width:25%;
+            height: auto;
+        }
+        
+        //Container Colors
+        &--orange{
+
+            background-color: $Orange300;
+        }
+        &--blue{
+
+            background-color: $Blue300;
+        }
+        &--yellow{
+
+            background-color: $Yellow300;
+        }
+        &--green{
+
+            background-color: $Green400;
+        }
+        &--purple{
+
+            background-color: $Purple700;
+        }
+        &--red{
+
+            background-color: $Pink400;
+        }
+        &--purple600{
+            background-color: $Purple600;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    main{
+        gap: 1rem;
+    }
+    .content{
+            display: grid;
+            width: 80%;
+            margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "intro intro"
+            "work play"
+            "study exercise"
+            "social selfcare"
+            ;
+            gap: 1rem;
+    }
+    .intro{
+        grid-area: intro;
+    }
+
+    .content .container{
+        width: 100%;
+
+    }
+    .container{
+        
+        &__background{
+            width: 100%;
+        }
+
+        &__icon{
+            width: 100%;
+        }
+        &__intro{
+            width: 100%;
+        }
+        &__work{
+        grid-area: work;           
+        }
+        &__study{
+        grid-area: study;            
+        }
+        &__exercise{
+        grid-area: exercise;            
+        }
+        &__play{
+        grid-area: play;            
+        }
+        &__social{
+        grid-area: social;            
+        }
+        &__selfcare{
+        grid-area: selfcare;            
+        }
+
+        //Finally :D
+        &:hover {
+            background-color: $Navy500;
+        }
+    }
+}
+
+@media (min-width: 1250px){
+    main{
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+            display: grid;
+            width: 70%;
+            margin: 0 ;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+            "intro work play study"
+            "intro exercise social selfcare"
+            ;
+            gap: 2rem;
+    }
+
+    .intro{
+        height: 100%;
+        margin: 0;
+        gap: 0;
+        padding: 0;
+
+    }
+    
+    .container{
+        &__icon--purple600{
+            height: 73%;
+            justify-content: center;            
+        }
+        
+        &__intro{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &--img{
+                width: 30%;
+                min-width: 6rem; 
+                max-width: none; 
+                height: auto; 
+                margin: 0.5rem; 
+                border: 0.2rem solid white; 
+                border-radius: 20rem;
+            }
+        }
+        &__intro .container__p{
+            font-size: 1.6rem;
+        }
+        &__intro span{
+            font-size: 3rem;
+        }
+
+
+
+        &__background{
+            height: 40%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 1.6rem;
+            padding-bottom: 1.5rem;
+        }
+
+        &__background--navy {
+            min-height: 14rem; 
+            
+        }
+
+        &__h1{
+            font-size: 3.5rem;
+        }
+
+        &__order--bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+    }
+}
