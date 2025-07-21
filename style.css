@@ -112,6 +112,9 @@ section {
   border: 0.2rem solid white;
   border-radius: 20rem;
 }
+.container__background .container__p:hover {
+  color: white;
+}
 .container__background {
   position: relative;
   width: 80%;
@@ -223,9 +226,6 @@ section {
   }
   .container__selfcare {
     grid-area: selfcare;
-  }
-  .container:hover {
-    background-color: hsl(236, 42%, 35%);
   }
 }
 @media (min-width: 1250px) {

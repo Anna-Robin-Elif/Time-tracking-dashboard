@@ -143,6 +143,9 @@ section {
             border-radius: 20rem;
         }
     }
+    &__background .container__p:hover{
+        color: white;
+    }
     &__background{
         position: relative;
         width: 80%;
@@ -282,12 +285,6 @@ section {
         &__selfcare{
         grid-area: selfcare;            
         }
-
-        //Finally :D
-        &:hover {
-            background-color: $Navy500;
-        }
-
     }
 }
 
