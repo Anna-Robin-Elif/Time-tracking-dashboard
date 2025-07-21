@@ -287,6 +287,7 @@ section {
         &:hover {
             background-color: $Navy500;
         }
+
     }
 }
 
@@ -343,7 +344,9 @@ section {
             font-size: 3rem;
         }
 
-
+        &__icon img{
+            width: 35%;
+        }
 
         &__background{
             height: 40%;

@@ -271,6 +271,9 @@ section {
   .container__intro span {
     font-size: 3rem;
   }
+  .container__icon img {
+    width: 35%;
+  }
   .container__background {
     height: 40%;
     display: flex;
